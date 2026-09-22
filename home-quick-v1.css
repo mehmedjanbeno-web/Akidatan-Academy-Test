@@ -1,0 +1,100 @@
+/* Home dashboard: keep all three sections visible on one screen */
+.view:has(.academy-home-brand){
+  min-height:calc(100dvh - 76px);
+  padding-top:14px;
+  padding-bottom:10px;
+  gap:0;
+  align-content:space-between;
+  grid-template-rows:auto auto auto auto auto;
+}
+.hero.academy-home-brand + .section-head{margin:8px 0 5px}
+.hero.academy-home-brand + .section-head + .grid-2{row-gap:14px;column-gap:9px}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card{min-height:94px;padding:11px 14px;border-radius:20px;gap:6px;position:relative}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+2){top:-12px}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(n+3){top:12px}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-icon{width:46px;height:46px;border-radius:14px;font-size:24px}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-title{font-size:calc(17px * var(--font-scale));line-height:1.08}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-sub{margin-top:1px;font-size:calc(12px * var(--font-scale));line-height:1.12}
+.hero.academy-home-brand + .section-head + .grid-2 + .section-head{margin:10px 0 5px}
+.hero.academy-home-brand + .section-head + .grid-2 + .section-head + .progress-card{padding-top:12px;padding-bottom:12px;margin-bottom:0}
+@media(max-width:430px){
+  .view:has(.academy-home-brand){min-height:calc(100dvh - 74px);padding-bottom:8px}
+  .hero.academy-home-brand + .section-head{margin-top:7px}
+  .hero.academy-home-brand + .section-head + .grid-2{row-gap:12px;column-gap:8px}
+  .hero.academy-home-brand + .section-head + .grid-2 .quick-card{min-height:92px;padding:10px 13px;border-radius:19px}
+  .hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+2){top:-11px}
+  .hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(n+3){top:11px}
+  .hero.academy-home-brand + .section-head + .grid-2 .quick-icon{width:44px;height:44px;border-radius:13px;font-size:23px}
+  .hero.academy-home-brand + .section-head + .grid-2 .quick-title{font-size:calc(16px * var(--font-scale))}
+  .hero.academy-home-brand + .section-head + .grid-2 .quick-sub{font-size:calc(11.5px * var(--font-scale))}
+  .hero.academy-home-brand + .section-head + .grid-2 + .section-head{margin-top:9px}
+}
+
+/* 2026-09-19: stronger hierarchy for home quick-access cards */
+.hero.academy-home-brand + .section-head + .grid-2{
+  grid-template-columns:1fr 1fr;
+  align-items:stretch;
+}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+3){
+  min-height:112px;
+  padding:15px 16px;
+  gap:9px;
+}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+3) .quick-icon{
+  width:50px;height:50px;border-radius:15px;font-size:26px;
+}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+3) .quick-title{
+  font-size:calc(18px * var(--font-scale));
+}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(4){
+  min-height:74px;
+  padding:9px 12px;
+  gap:5px;
+  align-self:center;
+  opacity:.92;
+}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(4) .quick-icon{
+  width:38px;height:38px;border-radius:12px;font-size:20px;
+}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(4) .quick-title{
+  font-size:calc(15px * var(--font-scale));
+}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(4) .quick-sub{
+  font-size:calc(10.5px * var(--font-scale));
+}
+@media(max-width:430px){
+  .hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+3){min-height:106px;padding:13px 14px}
+  .hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+3) .quick-icon{width:47px;height:47px;font-size:24px}
+  .hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+3) .quick-title{font-size:calc(17px * var(--font-scale))}
+  .hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(4){min-height:70px;padding:8px 11px}
+}
+
+/* 2026-09-19 v2: match approved dashboard proportions */
+.hero.academy-home-brand + .section-head + .grid-2{row-gap:12px!important;column-gap:12px!important}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+4){top:0!important;min-height:148px!important;padding:18px 18px!important;border-radius:24px!important;gap:12px!important;align-self:stretch!important;opacity:1!important}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+4) .quick-icon{width:58px!important;height:58px!important;border-radius:17px!important;font-size:29px!important}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+4) .quick-title{font-size:calc(20px * var(--font-scale))!important;line-height:1.08!important}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+4) .quick-sub{font-size:calc(12.5px * var(--font-scale))!important;line-height:1.18!important}
+.hero.academy-home-brand + .section-head + .grid-2 + .section-head{margin:12px 0 7px!important}
+.hero.academy-home-brand + .section-head + .grid-2 + .section-head + .progress-card{min-height:0!important;height:auto!important;padding:14px 16px!important;margin:0!important;border-radius:20px!important}
+.hero.academy-home-brand + .section-head + .grid-2 + .section-head + .progress-card .progress-row{margin-bottom:7px!important}
+.hero.academy-home-brand + .section-head + .grid-2 + .section-head + .progress-card .progress-track{margin:5px 0 7px!important}
+@media(max-width:430px){
+ .hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+4){min-height:138px!important;padding:16px!important;border-radius:22px!important}
+ .hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+4) .quick-icon{width:54px!important;height:54px!important;font-size:27px!important}
+ .hero.academy-home-brand + .section-head + .grid-2 + .section-head + .progress-card{padding:12px 14px!important}
+}
+
+/* 2026-09-19 v3: fit dashboard safely inside mobile viewport */
+.view:has(.academy-home-brand){display:grid!important;grid-template-rows:auto auto auto auto auto!important;align-content:start!important;gap:0!important;overflow:visible!important}
+.hero.academy-home-brand + .section-head + .grid-2{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;grid-auto-rows:118px!important;gap:10px!important;margin:0!important}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+4){position:relative!important;top:auto!important;bottom:auto!important;transform:none!important;min-height:0!important;height:118px!important;padding:12px 14px!important;border-radius:22px!important;gap:7px!important;overflow:hidden!important;align-self:auto!important}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+4) .quick-icon{width:48px!important;height:48px!important;border-radius:14px!important;font-size:24px!important;flex:0 0 48px!important}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+4) .quick-title{font-size:calc(17px * var(--font-scale))!important;line-height:1.05!important}
+.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+4) .quick-sub{font-size:calc(11px * var(--font-scale))!important;line-height:1.08!important;margin-top:2px!important}
+.hero.academy-home-brand + .section-head + .grid-2 + .section-head{margin:10px 2px 6px!important;position:relative!important;z-index:2!important}
+.hero.academy-home-brand + .section-head + .grid-2 + .section-head + .progress-card{height:108px!important;min-height:108px!important;padding:12px 14px!important;border-radius:20px!important;overflow:hidden!important;margin:0 0 8px!important}
+.hero.academy-home-brand + .section-head + .grid-2 + .section-head + .progress-card .progress-row{margin:0 0 5px!important}
+.hero.academy-home-brand + .section-head + .grid-2 + .section-head + .progress-card .progress-track{margin:4px 0 5px!important;height:8px!important}
+.hero.academy-home-brand + .section-head + .grid-2 + .section-head + .progress-card .quick-sub{margin:0!important}
+@media(max-width:430px){.hero.academy-home-brand + .section-head + .grid-2{grid-auto-rows:112px!important}.hero.academy-home-brand + .section-head + .grid-2 .quick-card:nth-child(-n+4){height:112px!important;padding:11px 12px!important}.hero.academy-home-brand + .section-head + .grid-2 + .section-head + .progress-card{height:102px!important;min-height:102px!important;padding:10px 13px!important}}
