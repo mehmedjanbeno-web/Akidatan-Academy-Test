@@ -207,3 +207,134 @@ html,body,.app-shell{background:var(--bg)!important}
 .view:has(.academy-home-brand)>.progress-card{height:72px!important;min-height:72px!important;max-height:72px!important;padding:8px 12px!important;margin-bottom:2px!important}
 .view:has(.academy-home-brand)>.progress-card .quick-sub{font-size:calc(9px * var(--font-scale))!important}
 }
+
+
+/* v4 — final cross-screen phone standard + light-theme hard fix. */
+:root:not([data-theme="dark"]){
+  color-scheme:light;
+}
+:root:not([data-theme="dark"]) body,
+:root:not([data-theme="dark"]) .view{color:#17324d!important;-webkit-text-fill-color:#17324d!important}
+:root:not([data-theme="dark"]) .quick-card{
+  background:linear-gradient(145deg,#fff,#edf5fb)!important;
+  color:#17324d!important;-webkit-text-fill-color:#17324d!important;
+  border-color:rgba(49,95,138,.12)!important
+}
+:root:not([data-theme="dark"]) .quick-card .quick-title{
+  color:#17324d!important;-webkit-text-fill-color:#17324d!important
+}
+:root:not([data-theme="dark"]) .quick-card .quick-sub{
+  color:#6d8296!important;-webkit-text-fill-color:#6d8296!important
+}
+:root:not([data-theme="dark"]) .quick-card .quick-icon,
+:root:not([data-theme="dark"]) .quick-card .quick-icon *{
+  color:#315f8a!important;-webkit-text-fill-color:#315f8a!important
+}
+:root:not([data-theme="dark"]) .section-head h2,
+:root:not([data-theme="dark"]) .progress-card,
+:root:not([data-theme="dark"]) .progress-card *{
+  color:#17324d!important;-webkit-text-fill-color:#17324d!important
+}
+:root:not([data-theme="dark"]) .progress-card .quick-sub{color:#6d8296!important;-webkit-text-fill-color:#6d8296!important}
+:root:not([data-theme="dark"]) .course-card,
+:root:not([data-theme="dark"]) .lesson-card-v2,
+:root:not([data-theme="dark"]) .profile-card,
+:root:not([data-theme="dark"]) .settings-list,
+:root:not([data-theme="dark"]) .lesson-screen>.card{
+  background:#fff!important;color:#17324d!important;-webkit-text-fill-color:#17324d!important
+}
+:root:not([data-theme="dark"]) .course-card h3,
+:root:not([data-theme="dark"]) .course-card .course-title-copy,
+:root:not([data-theme="dark"]) .lesson-card-v2 h3,
+:root:not([data-theme="dark"]) .profile-card h2,
+:root:not([data-theme="dark"]) .settings-list strong{
+  color:#17324d!important;-webkit-text-fill-color:#17324d!important
+}
+:root:not([data-theme="dark"]) .course-card p,
+:root:not([data-theme="dark"]) .lesson-card-v2 p,
+:root:not([data-theme="dark"]) .profile-card p{
+  color:#6d8296!important;-webkit-text-fill-color:#6d8296!important
+}
+:root:not([data-theme="dark"]) .badge{background:#e7f0f8!important;color:#315f8a!important;-webkit-text-fill-color:#315f8a!important}
+:root:not([data-theme="dark"]) .bottom-nav{
+  background:rgba(255,255,255,.97)!important;border-top:1px solid rgba(49,95,138,.12)!important
+}
+:root:not([data-theme="dark"]) .nav-item{color:#6d8296!important;-webkit-text-fill-color:#6d8296!important}
+:root:not([data-theme="dark"]) .nav-item.active{
+  background:#e7f0f8!important;color:#315f8a!important;-webkit-text-fill-color:#315f8a!important
+}
+:root:not([data-theme="dark"]) .nav-item.active .nav-icon{color:#d4af37!important}
+
+/* Every primary screen uses the same phone viewport standard.
+   The page shell itself does not scroll; only long content lists scroll inside the screen. */
+@media(max-width:760px){
+  html,body{height:100%;min-height:100%;overflow:hidden!important}
+  body{overscroll-behavior:none}
+  .app-shell{
+    height:100dvh!important;min-height:100dvh!important;max-height:100dvh!important;
+    padding-bottom:0!important;overflow:hidden!important
+  }
+  .view{
+    height:calc(100dvh - 70px)!important;min-height:0!important;max-height:calc(100dvh - 70px)!important;
+    overflow-y:auto!important;overflow-x:hidden!important;overscroll-behavior-y:contain;
+    -webkit-overflow-scrolling:touch;padding-bottom:14px!important;align-content:start!important
+  }
+  .bottom-nav{height:70px!important;min-height:70px!important;padding:5px 7px calc(5px + env(safe-area-inset-bottom))!important}
+  .nav-item{min-height:54px!important}
+  .view:has(.academy-home-brand){
+    height:calc(100dvh - 70px)!important;min-height:0!important;max-height:calc(100dvh - 70px)!important;
+    overflow:hidden!important;padding-bottom:6px!important;gap:5px!important
+  }
+  .view:has(.profile-card){
+    height:calc(100dvh - 70px)!important;min-height:0!important;max-height:calc(100dvh - 70px)!important;
+    overflow:hidden!important;padding-bottom:8px!important;gap:7px!important
+  }
+  .view:has(.profile-card)>.link-btn[data-back]{min-height:42px!important;height:42px!important}
+  .view:has(.profile-card) .profile-card{padding:9px 11px!important}
+  .view:has(.profile-card) .settings-list{padding:6px 10px!important}
+  .view:has(.profile-card) .setting-row{padding:6px 2px!important}
+  .view:has(.profile-card) .secondary-btn{min-height:38px!important}
+  .empty-state{min-height:0!important}
+}
+@media(max-width:430px){
+  .hero.academy-home-brand{
+    min-height:0!important;height:214px!important;max-height:214px!important;
+    padding:12px 66px 11px!important
+  }
+  .hero.academy-home-brand .academy-home-logo{width:54px!important;height:54px!important;left:9px!important;top:12px!important}
+  .hero.academy-home-brand .academy-home-menu{width:50px!important;height:50px!important;right:9px!important;top:12px!important}
+  .hero.academy-home-brand h2{font-size:calc(17px * var(--font-scale))!important;line-height:1.05!important}
+  .hero.academy-home-brand .academy-home-motto{font-size:calc(12px * var(--font-scale))!important;margin:5px 0!important}
+  .hero.academy-home-brand .academy-home-divider{margin:4px auto!important}
+  .hero.academy-home-brand>p:not(.academy-home-motto){font-size:calc(11px * var(--font-scale))!important;margin:4px 0 6px!important}
+  .hero.academy-home-brand .primary-btn{min-height:42px!important;height:42px!important;padding:6px 12px!important}
+  .view:has(.academy-home-brand)>.section-head{margin:2px 2px 1px!important;min-height:22px!important}
+  .view:has(.academy-home-brand)>.section-head h2{font-size:calc(16px * var(--font-scale))!important}
+  .view:has(.academy-home-brand)>.grid-2{
+    min-height:0!important;height:214px!important;grid-template-rows:repeat(2,103px)!important;
+    grid-auto-rows:103px!important;gap:8px!important
+  }
+  .view:has(.academy-home-brand)>.grid-2>.quick-card{
+    height:103px!important;min-height:103px!important;padding:9px 10px!important;border-radius:18px!important
+  }
+  .view:has(.academy-home-brand)>.grid-2>.quick-card .quick-icon{
+    width:38px!important;height:38px!important;flex-basis:38px!important;border-radius:12px!important
+  }
+  .view:has(.academy-home-brand)>.grid-2>.quick-card .quick-title{font-size:calc(15px * var(--font-scale))!important}
+  .view:has(.academy-home-brand)>.grid-2>.quick-card .quick-sub{font-size:calc(9.5px * var(--font-scale))!important;line-height:1.08!important}
+  .view:has(.academy-home-brand)>.grid-2+.section-head{margin:1px 2px 0!important;min-height:18px!important}
+  .view:has(.academy-home-brand)>.grid-2+.section-head h2{font-size:calc(14px * var(--font-scale))!important}
+  .view:has(.academy-home-brand)>.progress-card{
+    height:52px!important;min-height:52px!important;max-height:52px!important;
+    padding:5px 10px!important;border-radius:15px!important;margin:0!important;gap:1px!important
+  }
+  .view:has(.academy-home-brand)>.progress-card .progress-row strong{font-size:calc(15px * var(--font-scale))!important}
+  .view:has(.academy-home-brand)>.progress-card .progress-track{height:4px!important;margin:0!important}
+  .view:has(.academy-home-brand)>.progress-card .quick-sub{font-size:calc(8px * var(--font-scale))!important}
+}
+@media(max-width:430px) and (max-height:760px){
+  .hero.academy-home-brand{height:188px!important;max-height:188px!important;padding-top:8px!important;padding-bottom:8px!important}
+  .view:has(.academy-home-brand)>.grid-2{height:194px!important;grid-template-rows:repeat(2,93px)!important}
+  .view:has(.academy-home-brand)>.grid-2>.quick-card{height:93px!important;min-height:93px!important}
+  .view:has(.academy-home-brand)>.progress-card{height:46px!important;min-height:46px!important;max-height:46px!important}
+}
