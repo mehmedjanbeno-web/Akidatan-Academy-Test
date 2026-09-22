@@ -338,3 +338,34 @@ html,body,.app-shell{background:var(--bg)!important}
   .view:has(.academy-home-brand)>.grid-2>.quick-card{height:93px!important;min-height:93px!important}
   .view:has(.academy-home-brand)>.progress-card{height:46px!important;min-height:46px!important;max-height:46px!important}
 }
+
+
+/* v5 — exact light-theme specificity fix from phone screenshots. */
+html:not([data-theme="dark"]) body .view .grid-2 .quick-card .quick-title,
+html:not([data-theme="dark"]) body .view .grid-2 .quick-card strong,
+html:not([data-theme="dark"]) body .view .grid-2 .quick-card h2,
+html:not([data-theme="dark"]) body .view .grid-2 .quick-card h3{
+  color:#17324d!important;
+  -webkit-text-fill-color:#17324d!important;
+  opacity:1!important;
+  text-shadow:none!important
+}
+html:not([data-theme="dark"]) body .view .grid-2 .quick-card .quick-sub{
+  color:#6d8296!important;
+  -webkit-text-fill-color:#6d8296!important;
+  opacity:1!important;
+  text-shadow:none!important
+}
+html:not([data-theme="dark"]) body .view .grid-2 .quick-card{
+  color:#17324d!important;
+  -webkit-text-fill-color:#17324d!important;
+}
+html:not([data-theme="dark"]) body .bottom-nav .nav-item small{
+  color:#6d8296!important;
+  -webkit-text-fill-color:#6d8296!important;
+  opacity:1!important
+}
+html:not([data-theme="dark"]) body .bottom-nav .nav-item.active small{
+  color:#315f8a!important;
+  -webkit-text-fill-color:#315f8a!important
+}
