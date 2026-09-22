@@ -510,3 +510,29 @@ html:not([data-theme="dark"]) body .bottom-nav .nav-item.active small{
   padding:4px 9px!important;margin:0!important;overflow:hidden!important
  }
 }
+
+
+/* v8 — lesson density, centered CTA, real Academy mark */
+.side-menu-brand-mark{overflow:hidden!important;padding:0!important}
+.side-menu-brand-mark img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;border-radius:inherit!important}
+.hero.academy-home-brand .primary-btn{
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ width:min(100%,420px)!important;min-width:0!important;margin-left:auto!important;margin-right:auto!important;
+ text-align:center!important
+}
+@media(max-width:430px){
+ .course-list{gap:10px!important}
+ .course-card{
+  min-height:0!important;padding:12px 14px!important;border-radius:20px!important;gap:7px!important
+ }
+ .course-card .course-top{min-height:32px!important;margin-bottom:2px!important}
+ .course-card .course-top .badge{font-size:14px!important;padding:4px 8px!important}
+ .course-card .course-title-row{gap:5px!important;margin-top:1px!important}
+ .course-card .course-title-copy{font-size:14px!important;line-height:1.18!important}
+ .course-card .age-label,
+ .course-card [class*="age"]{
+  min-height:0!important;height:auto!important;padding:8px 12px!important;margin:6px auto 2px!important;
+  font-size:22px!important;line-height:1.1!important;border-radius:16px!important
+ }
+ .course-card>p:last-child,.course-card .course-count{font-size:12px!important;margin:3px 0 0!important}
+}
