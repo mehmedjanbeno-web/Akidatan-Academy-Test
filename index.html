@@ -19,39 +19,13 @@
   <link rel="stylesheet" href="stable-design-v2.css?v=20260915-clean" />
   <link rel="stylesheet" href="unified-theme-v1.css?v=20260915-clean" />
   <link rel="stylesheet" href="readability.css?v=20260915-final" />
-  <link rel="stylesheet" href="matte-blue-academy-v1.css?v=20260924-final9" />
+  <link rel="stylesheet" href="matte-blue-academy-v1.css?v=20260924-final10" />
   <link rel="stylesheet" href="profile-fix-v2.css?v=20260915-clean" />
-  <style>
+  <style id="final-layout-base">
     .topbar{display:none!important}
-    .link-btn[data-back]{justify-self:start!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:9px!important;min-height:48px!important;height:48px!important;padding:7px 15px!important;border-radius:15px!important;background:var(--surface-2)!important;border:1px solid var(--gold)!important;color:var(--text)!important;font-size:calc(17px * var(--font-scale))!important;font-weight:900!important;box-shadow:0 6px 18px rgba(0,0,0,.22)!important;text-decoration:none!important;transition:transform .14s ease,background .14s ease!important}
-    .link-btn[data-back]:active{transform:scale(.97)!important;background:var(--surface)!important}
-    .search-wrap input{padding-right:66px!important}
-    .search-wrap>span{right:10px!important;top:50%!important;transform:translateY(-50%)!important;width:44px!important;height:44px!important;display:flex!important;align-items:center!important;justify-content:center!important;font-size:32px!important;line-height:1!important;font-weight:900!important;color:var(--primary-2)!important;opacity:1!important;pointer-events:none!important}
-    /* Home layout final override: loaded after all theme styles */
-    .view:has(.academy-home-brand){height:auto!important;min-height:calc(100dvh - 4px)!important;grid-template-rows:auto auto auto auto auto!important;align-content:start!important;overflow:visible!important}
-    .view:has(.academy-home-brand)>.grid-2{height:auto!important;min-height:0!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-rows:repeat(2,148px)!important;grid-auto-rows:148px!important;gap:10px!important;align-self:auto!important}
-    .view:has(.academy-home-brand)>.grid-2>.quick-card{position:static!important;top:auto!important;transform:none!important;width:100%!important;height:148px!important;min-height:148px!important;padding:15px!important;border-radius:22px!important;justify-content:space-between!important;overflow:hidden!important}
-    .view:has(.academy-home-brand)>.grid-2>.quick-card .quick-icon{width:52px!important;height:52px!important;flex:0 0 52px!important;border-radius:15px!important;font-size:26px!important}
-    .view:has(.academy-home-brand)>.grid-2>.quick-card .quick-title{font-size:calc(18px * var(--font-scale))!important;line-height:1.08!important}
-    .view:has(.academy-home-brand)>.grid-2>.quick-card .quick-sub{font-size:calc(11.5px * var(--font-scale))!important;line-height:1.15!important}
-    .view:has(.academy-home-brand)>.grid-2+.section-head{margin:10px 2px 6px!important;min-height:28px!important}
-    .view:has(.academy-home-brand)>.progress-card{height:76px!important;min-height:76px!important;max-height:76px!important;align-self:auto!important;padding:12px 14px!important;border-radius:20px!important;gap:6px!important;margin:0 0 8px!important;overflow:hidden!important}
-    .view:has(.academy-home-brand)>.progress-card .progress-row{margin:0!important}
-    .view:has(.academy-home-brand)>.progress-card .progress-track{height:7px!important;margin:2px 0!important}
-    .view:has(.academy-home-brand)>.progress-card .quick-sub{margin:0!important;font-size:calc(10px * var(--font-scale))!important}
-    .view:has(.academy-home-brand)>.progress-card .progress-row strong{font-size:calc(19px * var(--font-scale))!important}
-    /* Final one-screen tuning: only compact the My progress area */
-    .view:has(.academy-home-brand)>.grid-2+.section-head{margin-top:4px!important;margin-bottom:2px!important;min-height:22px!important}
-    .view:has(.academy-home-brand)>.grid-2+.section-head h2{font-size:calc(16px * var(--font-scale))!important;line-height:1!important}
-    .view:has(.academy-home-brand)>.grid-2+.section-head .link-btn{padding:1px 4px!important;line-height:1!important}
-    .view:has(.academy-home-brand)>.progress-card{height:58px!important;min-height:58px!important;max-height:58px!important;padding:6px 12px!important;gap:2px!important;border-radius:16px!important}
-    .view:has(.academy-home-brand)>.progress-card .progress-row{line-height:1!important;align-items:center!important}
-    .view:has(.academy-home-brand)>.progress-card .progress-row strong{font-size:calc(17px * var(--font-scale))!important}
-    .view:has(.academy-home-brand)>.progress-card .progress-track{height:5px!important;margin:1px 0!important}
-    .view:has(.academy-home-brand)>.progress-card .quick-sub{font-size:calc(9px * var(--font-scale))!important;line-height:1!important}
-    /* Move only the My progress block down into the free space above bottom nav */
-    .view:has(.academy-home-brand)>.grid-2+.section-head{margin-top:10px!important}
-    
+    .link-btn[data-back]{justify-self:start;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:7px 14px;border-radius:15px;background:var(--surface-2);border:1px solid var(--gold);color:var(--text);font-weight:900;text-decoration:none}
+    .search-wrap input{padding-right:60px}
+    .search-wrap>span{right:10px;top:50%;transform:translateY(-50%);width:42px;height:42px;display:flex;align-items:center;justify-content:center;font-size:30px;color:var(--primary-2);pointer-events:none}
   </style>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
@@ -73,6 +47,6 @@
 <body>
   <div id="app" class="app-shell"><header class="topbar"><div class="brand-wrap"><img class="brand-logo" src="https://t.me/i/userpic/320/AkidatanAcademyAppBot.jpg?v=2" alt="Ӏакъидатан Академия" /><div class="brand-copy"><div class="eyebrow">ӀАКЪИДАТАН АКАДЕМИЯ</div><h1 id="page-title">Коьртаниг</h1></div></div><button id="side-menu-toggle" class="side-menu-trigger" type="button" aria-label="Открыть меню" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></header><main id="view" class="view" aria-live="polite"></main><nav class="bottom-nav" aria-label="Основная навигация"><button class="nav-item active" data-route="home"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5v9a1.5 1.5 0 0 1-1.5 1.5h-5v-6h-5v6h-5A1.5 1.5 0 0 1 3 19.5z"/></svg></span><small>Коьрта агIо</small></button><button class="nav-item" data-route="courses"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5zM4 5.5v16M8 7h8M8 11h8"/></svg></span><small>Курсаш</small></button><button class="nav-item" data-route="favorites"><span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6L12 21l8.8-8.8a5.4 5.4 0 0 0 0-7.6z"/></svg></span><small>Хаьржинарш</small></button><button class="nav-item" data-route="profile"><span class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></svg></span><small>Профиль</small></button></nav></div>
   <template id="empty-template"><section class="card empty-state"><div class="empty-icon">✦</div><h2></h2><p></p></section></template>
-  <script src="app-20260920-v4.js"></script><script src="lesson-card-ui-v1.js?v=20260920-no-lesson-badges-v1"></script><script src="language-ui-v1.js?v=20260915-clean"></script><script src="home-brand-v1.js?v=20260918-ce-approved"></script><script src="nav-v2.js?v=20260918-ce-approved"></script><script src="profile-sync-v2.js?v=20260918-ce-approved"></script><script src="profile-progress.js?v=20260918-ce-approved"></script><script src="side-menu-v1.js?v=20260924-final9"></script>
+  <script src="app-20260920-v4.js"></script><script src="lesson-card-ui-v1.js?v=20260920-no-lesson-badges-v1"></script><script src="language-ui-v1.js?v=20260915-clean"></script><script src="home-brand-v1.js?v=20260918-ce-approved"></script><script src="nav-v2.js?v=20260918-ce-approved"></script><script src="profile-sync-v2.js?v=20260918-ce-approved"></script><script src="profile-progress.js?v=20260918-ce-approved"></script><script src="side-menu-v1.js?v=20260924-final10"></script>
 </body></html>
 
