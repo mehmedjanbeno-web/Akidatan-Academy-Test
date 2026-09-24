@@ -536,3 +536,36 @@ html:not([data-theme="dark"]) body .bottom-nav .nav-item.active small{
  }
  .course-card>p:last-child,.course-card .course-count{font-size:12px!important;margin:3px 0 0!important}
 }
+
+
+/* v9 — phone review: readable light cards, single-line CTA, compact courses, About scroll */
+html:not([data-theme="dark"]) body .view .quick-card .quick-title{
+ color:#17324d!important;-webkit-text-fill-color:#17324d!important;opacity:1!important
+}
+html:not([data-theme="dark"]) body .view .quick-card .quick-sub{
+ color:#5c7388!important;-webkit-text-fill-color:#5c7388!important;opacity:1!important
+}
+.hero.academy-home-brand .primary-btn{
+ white-space:nowrap!important;font-size:clamp(15px,4.3vw,19px)!important;
+ width:auto!important;min-width:250px!important;max-width:calc(100% - 20px)!important;
+ padding-left:22px!important;padding-right:22px!important
+}
+.side-menu.side-menu-detail-open{overflow-y:auto!important;overscroll-behavior:contain!important}
+.side-menu-about.open{scroll-margin-top:12px!important}
+@media(max-width:430px){
+ .course-list{gap:7px!important}
+ .course-card{
+  padding:9px 12px!important;border-radius:18px!important;gap:3px!important;
+  min-height:0!important
+ }
+ .course-card .course-top{min-height:25px!important;margin:0!important}
+ .course-card .course-top .badge{font-size:13px!important;line-height:1!important;padding:4px 8px!important}
+ .course-card .course-title-row{margin:0!important;gap:2px!important}
+ .course-card .course-title-copy{font-size:12.5px!important;line-height:1.1!important}
+ .course-card .age-label,.course-card [class*="age"]{
+  width:76%!important;min-height:0!important;height:auto!important;
+  padding:6px 10px!important;margin:3px auto 1px!important;
+  font-size:18px!important;line-height:1.05!important;border-radius:14px!important
+ }
+ .course-card .quick-sub{font-size:11px!important;line-height:1!important;margin-top:3px!important}
+}
