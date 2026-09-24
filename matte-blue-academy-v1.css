@@ -626,3 +626,64 @@ html:not([data-theme="dark"]) body .quick-card .quick-sub{
  #course-search-results.course-list .course-card .course-heading{margin:1px 0!important}
  #course-search-results.course-list .course-card .quick-sub{margin-top:2px!important}
 }
+
+
+/* final12 — single authoritative home layout, overrides every legacy layer */
+@media(max-width:430px){
+ #view.view:has(.academy-home-brand){
+  display:block!important;height:calc(100dvh - 70px)!important;overflow:hidden!important;
+  padding:0 12px 4px!important
+ }
+ #view>.hero.academy-home-brand{
+  height:194px!important;min-height:194px!important;max-height:194px!important;
+  box-sizing:border-box!important;margin:0 -12px 5px!important;padding:10px 68px 8px!important
+ }
+ #view>.hero.academy-home-brand .primary-btn{
+  display:block!important;box-sizing:border-box!important;
+  width:270px!important;max-width:calc(100vw - 110px)!important;min-width:0!important;
+  height:38px!important;min-height:38px!important;margin:4px auto 0!important;padding:0 8px!important;
+  font-size:14px!important;line-height:38px!important;text-align:center!important;white-space:nowrap!important
+ }
+ #view>.hero.academy-home-brand+.section-head{height:29px!important;min-height:29px!important;margin:0 2px 3px!important}
+ #view>.hero.academy-home-brand+.section-head h2{font-size:17px!important}
+ #view>.hero.academy-home-brand+.section-head+.grid-2{
+  display:grid!important;height:210px!important;grid-template-columns:1fr 1fr!important;
+  grid-template-rows:101px 101px!important;grid-auto-rows:101px!important;gap:8px!important;margin:0!important
+ }
+ #view>.hero.academy-home-brand+.section-head+.grid-2>.quick-card{
+  position:static!important;transform:none!important;top:auto!important;
+  height:101px!important;min-height:101px!important;max-height:101px!important;
+  box-sizing:border-box!important;padding:9px 11px!important;border-radius:18px!important;gap:4px!important
+ }
+ #view>.hero.academy-home-brand+.section-head+.grid-2>.quick-card .quick-icon{
+  width:38px!important;height:38px!important;flex:0 0 38px!important;font-size:20px!important
+ }
+ #view>.hero.academy-home-brand+.section-head+.grid-2>.quick-card .quick-title{
+  font-size:14px!important;line-height:1.05!important
+ }
+ #view>.hero.academy-home-brand+.section-head+.grid-2>.quick-card .quick-sub{
+  font-size:9px!important;line-height:1.05!important
+ }
+ #view>.hero.academy-home-brand+.section-head+.grid-2+.section-head{
+  position:static!important;height:24px!important;min-height:24px!important;margin:3px 2px 2px!important;
+  z-index:auto!important
+ }
+ #view>.hero.academy-home-brand+.section-head+.grid-2+.section-head h2{font-size:13px!important}
+ #view>.hero.academy-home-brand+.section-head+.grid-2+.section-head .link-btn{font-size:11px!important;padding:2px!important}
+ #view>.hero.academy-home-brand+.section-head+.grid-2+.section-head+.progress-card{
+  position:static!important;box-sizing:border-box!important;height:48px!important;min-height:48px!important;max-height:48px!important;
+  margin:0!important;padding:5px 10px!important;border-radius:14px!important;overflow:hidden!important
+ }
+ #view>.hero.academy-home-brand+.section-head+.grid-2+.section-head+.progress-card .progress-row{margin:0!important}
+ #view>.hero.academy-home-brand+.section-head+.grid-2+.section-head+.progress-card .progress-row strong{font-size:12px!important}
+ #view>.hero.academy-home-brand+.section-head+.grid-2+.section-head+.progress-card .progress-track{height:3px!important;margin:2px 0!important}
+ #view>.hero.academy-home-brand+.section-head+.grid-2+.section-head+.progress-card .quick-sub{font-size:8px!important}
+}
+:root:not([data-theme="dark"]) #view>.hero.academy-home-brand+.section-head+.grid-2>.quick-card .quick-title,
+:root[data-theme="light"] #view>.hero.academy-home-brand+.section-head+.grid-2>.quick-card .quick-title{
+ color:#17324d!important;-webkit-text-fill-color:#17324d!important;opacity:1!important
+}
+:root:not([data-theme="dark"]) #view>.hero.academy-home-brand+.section-head+.grid-2>.quick-card .quick-sub,
+:root[data-theme="light"] #view>.hero.academy-home-brand+.section-head+.grid-2>.quick-card .quick-sub{
+ color:#60778d!important;-webkit-text-fill-color:#60778d!important;opacity:1!important
+}
