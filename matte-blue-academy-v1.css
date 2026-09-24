@@ -597,3 +597,32 @@ html:not([data-theme="dark"]) body .view .grid-2>.quick-card .quick-sub{
  .course-card .quick-sub{font-size:10.5px!important;margin-top:2px!important}
  .side-menu.side-menu-detail-open{overflow-y:auto!important;-webkit-overflow-scrolling:touch!important}
 }
+
+
+/* final11 — hard final fixes from verified phone screenshots */
+html[data-theme="light"] body .quick-card .quick-title,
+html:not([data-theme="dark"]) body .quick-card .quick-title,
+body:not(.dark) .quick-card .quick-title{
+ color:#17324d!important;-webkit-text-fill-color:#17324d!important;
+ opacity:1!important;visibility:visible!important;text-shadow:none!important
+}
+html[data-theme="light"] body .quick-card .quick-sub,
+html:not([data-theme="dark"]) body .quick-card .quick-sub{
+ color:#60778d!important;-webkit-text-fill-color:#60778d!important;opacity:1!important
+}
+.avatar img{width:100%!important;height:100%!important;display:block!important;object-fit:cover!important;border-radius:50%!important}
+@media(max-width:430px){
+ .hero.academy-home-brand .primary-btn{
+  box-sizing:border-box!important;width:calc(100% - 24px)!important;max-width:330px!important;
+  min-width:0!important;margin:3px auto 0!important;padding:0 10px!important;
+  white-space:nowrap!important;overflow:hidden!important;text-overflow:clip!important;
+  font-size:14px!important;line-height:39px!important;height:39px!important
+ }
+ #course-search-results.course-list .course-card{
+  min-height:0!important;height:auto!important;max-height:190px!important;
+  padding:8px 12px!important;margin:0!important
+ }
+ #course-search-results.course-list .course-card .course-top{min-height:22px!important;margin:0!important}
+ #course-search-results.course-list .course-card .course-heading{margin:1px 0!important}
+ #course-search-results.course-list .course-card .quick-sub{margin-top:2px!important}
+}
